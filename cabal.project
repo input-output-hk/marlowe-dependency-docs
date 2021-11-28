@@ -5,6 +5,7 @@ packages: .
 tests: False
 benchmarks: False
 optimization: False
+flags: +defer-plugin-errors
 
 write-ghc-environment-files: never
 

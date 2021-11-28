@@ -11,42 +11,34 @@ library
     exposed-modules : Compendium
     hs-source-dirs  : src
     build-depends   : base ^>= 4.14.3.0
---                  , adjunctions
+                    , abstract-deque
+                    , adjunctions
                     , aeson
---                  , aeson-casing
                     , aeson-pretty
---                  , aeson-qq
---                  , algebraic-graphs
---                  , ansi-terminal
---                  , ansi-wl-pprint
+                    , algebraic-graphs
                     , array
                     , async
                     , async-timer
                     , attoparsec
---                  , attoparsec-iso8601
---                  , auto-update
---                  , barbies
-                    , base-deriving-via
+                    , attoparsec-iso8601
                     , base16-bytestring
                     , base58-bytestring
                     , base64-bytestring
                     , base64-bytestring-type
---                  , basement
 --                  , beam-core
 --                  , beam-migrate
 --                  , beam-sqlite
                     , bech32
---                  , bech32-th
---                  , benchpress
---                  , bifunctors
---                  , bimap
+                    , bifunctors
+                    , bimap
                     , binary
---                  , binary-search
+--                  , blaze-builder
 --                  , blaze-html
+--                  , blaze-markup
+--                  , blaze-textual
                     , byron-spec-chain
                     , byron-spec-ledger
                     , bytestring
---                  , canonical-json
                     , cardano-addresses
                     , cardano-addresses-cli
 --                  , cardano-addresses-jsapi
@@ -60,10 +52,10 @@ library
                     , cardano-crypto-class
                     , cardano-crypto-praos
                     , cardano-crypto-wrapper
-----                , cardano-db
-----                , cardano-db-sync
-----                , cardano-db-sync-extended
-----                , cardano-db-tool
+  --                , cardano-db
+  --                , cardano-db-sync
+  --                , cardano-db-sync-extended
+  --                , cardano-db-tool
 --                  , cardano-ledger
                     , cardano-ledger-alonzo
                     , cardano-ledger-byron
@@ -78,158 +70,86 @@ library
                     , cardano-protocol-tpraos
 --                  , cardano-sl-x509
                     , cardano-slotting
-----                , cardano-smash-server
+  --                , cardano-smash-server
                     , cardano-submit-api
-----                , cardano-sync
-----                , cardano-wallet
-----                , cardano-wallet-cli
-----                , cardano-wallet-core
-----                , cardano-wallet-core-integration
-----                , cardano-wallet-launcher
---                  , casing
+  --                , cardano-sync
+                    , cardano-wallet
+                    , cardano-wallet-cli
+                    , cardano-wallet-core
+                    , cardano-wallet-core-integration
+                    , cardano-wallet-launcher
 --                  , cassava
---                  , cborg
+                    , cborg
+                    , cereal
 --                  , clock
---                  , code-page
---                  , colour
---                  , command
 --                  , compact-map
---                  , composition-prelude
                     , conduit
                     , conduit-extra
---                  , connection
---                  , constraints
---                  , constraints-extras
                     , containers
 --                  , contra-tracer
                     , contravariant
---                  , cookie
---                  , criterion
---                  , criterion-measurement
---                  , cryptohash
---                  , cryptonite
+                    , criterion
+                    , criterion-measurement
+                    , cryptohash
+                    , cryptonite
                     , data-default
---                  , data-default-class
---                  , data-fix
---                  , data-ordlist
---                  , dbvar
+                    , data-fix
                     , deepseq
 --                  , delay
---                  , dependent-map
---                  , dependent-sum
---                  , dependent-sum-template
---                  , deque
---                  , deriving-aeson
---                  , deriving-compat
---                  , digest
+                    , digest
                     , directory
---                  , dlist
+                    , dlist
 --                  , dns
---                  , doctest
---                  , dom-lt
---                  , download
---                  , either
-                    , ekg
-                    , ekg-core
-                    , ekg-forward
---                  , else
---                  , errors
---                  , esqueleto
---                  , exact-combinatorics
+                    , either
+--                  , ekg
+--                  , ekg-core
+--                  , ekg-forward
 --                  , exceptions
 --                  , extensible-effects
---                  , extra
---                  , fail
+                    , extra
 --                  , fake-pab
                     , fast-logger
---                  , fgl
 --                  , file-embed
 --                  , filelock
---                  , filemanip
                     , filepath
---                  , fingertree
 --                  , flat
---                  , fmt
 --                  , foldl
---                  , fomega
---                  , formatting
---                  , foundation
---                  , free
+                    , free
                     , freer-extras
---                  , freer-simple
---                  , gauge
---                  , generic-arbitrary
---                  , generic-data
---                  , generic-deriving
---                  , generic-lens
---                  , generic-lens-core
---                  , generic-monoid
---                  , generic-random
---                  , generics-sop
---                  , genvalidity
---                  , genvalidity-scientific
---                  , ghc
+                    , freer-simple
 --                  , ghc-heap
 --                  , ghc-prim
---                  , ghcjs-base
---                  , gnuplot
                     , goblins
 --                  , graphviz
 --                  , groups
---                  , hashable
---                  , hedgehog
+                    , hashable
+                    , hedgehog
 --                  , hedgehog-corpus
                     , hedgehog-extras
---                  , hedgehog-quickcheck
---                  , heredoc
---                  , hint
---                  , Histogram
---                  , hjsonschema
---                  , hostname
---                  , hspec
---                  , hspec-core
+                    , hedgehog-quickcheck
+                    , hspec
+                    , hspec-core
 --                  , hspec-expectations
 --                  , hspec-expectations-lifted
 --                  , hspec-expectations-pretty-diff
 --                  , hspec-golden
 --                  , hspec-golden-aeson
 --                  , hspec-hedgehog
---                  , hsyslog
---                  , http-api-data
---                  , http-client
---                  , http-client-tls
---                  , http-conduit
---                  , http-media
---                  , http-types
---                  , HUnit
---                  , ieee754
---                  , if
---                  , immortal
---                  , index-envs
---                  , inline-r
+                    , http-api-data
+                    , http-client
+                    , http-client-tls
+                    , http-conduit
+                    , http-media
+                    , http-types
+                    , HUnit
 --                  , insert-ordered-containers
---                  , inspector
---                  , int-cast
---                  , integer-gmp
---                  , IntervalMap
-                    , io-classes
-                    , io-sim
+--                  , io-classes
+--                  , io-sim
 --                  , iohk-monitoring
---                  , iproute
---                  , ixset-typed
---                  , jsaddle
---                  , jsaddle-warp
---                  , JuicyPixels
 --                  , jwt
---                  , katip
---                  , lattices
---                  , lazy-search
                     , lens
                     , lens-aeson
---                  , libsystemd-journal
 --                  , lifted-base
---                  , list-t
---                  , lists-internal
 --                  , lobemo-backend-aggregation
 --                  , lobemo-backend-editor
 --                  , lobemo-backend-ekg
@@ -237,51 +157,41 @@ library
 --                  , lobemo-backend-trace-acceptor
 --                  , lobemo-backend-trace-forwarder
 --                  , lobemo-scribe-systemd
---                  , loch-th
---                  , locli
---                  , logfloat
---                  , mainland-pretty
   --                , mantra
   --                , mantra-oracle
-----                , marlowe
-----                , marlowe-actus
-----                , marlowe-dashboard-server
-----                , marlowe-playground-server
-----                , marlowe-symbolic
+                    , marlowe
+                    , marlowe-actus
+                    , marlowe-dashboard-server
+                    , marlowe-playground-server
+                    , marlowe-symbolic
 --                  , math-functions
                     , measures
 --                  , megaparsec
---                  , memory
+                    , memory
 --                  , microlens
 --                  , microlens-mtl
 --                  , microlens-th
 --                  , microstache
---                  , mmorph
---                  , monad-control
---                  , monad-logger
+                    , mime-types
+                    , monad-control
+                    , monad-logger
                     , MonadRandom
 --                  , mono-traversable
 --                  , monoidal-containers
-                    , monoidal-synchronisation
+--                  , monoidal-synchronisation
 --                  , moo
                     , mtl
---                  , mwc-random
+                    , mwc-random
                     , network
                     , network-mux
                     , network-uri
---                  , newtype-generics
---                  , nofib-internal
-                    , non-integral
---                  , nonempty-containers
---                  , nothunks
---                  , ntp-client
---                  , OddWord
---                  , openapi3
+--                  , non-integral
+                    , nonempty-containers
+                    , openapi3
                     , optparse-applicative
---                  , optparse-applicative-fork
---                  , optparse-generic
+                    , optparse-applicative-fork
                     , orphans-deriving-via
---                  , ouroboros-consensus
+                    , ouroboros-consensus
                     , ouroboros-consensus-byron
 --                  , ouroboros-consensus-byronspec
                     , ouroboros-consensus-cardano
@@ -291,107 +201,92 @@ library
                     , ouroboros-network-framework
 --                  , parsec
 --                  , parser-combinators
---                  , partial-order
---                  , path-pieces
                     , persistent
---                  , persistent-documentation
 --                  , persistent-postgresql
---                  , persistent-sqlite
---                  , persistent-template
+                    , persistent-sqlite
+                    , persistent-template
 --                  , pipes
-----                , playground-common
+                    , playground-common
   --                , plutus-benchmark
 --                  , plutus-benchmark-common
-----                , plutus-chain-index
-----                , plutus-chain-index-core
-----                , plutus-contract
-----                , plutus-core
-----                , plutus-errors
+                    , plutus-chain-index
+                    , plutus-chain-index-core
+                    , plutus-contract
+                    , plutus-core
+                    , plutus-errors
   --                , plutus-example
-----                , plutus-ghc-stub
-----                , plutus-ledger
-----                , plutus-ledger-api
+                    , plutus-ghc-stub
+                    , plutus-ledger
+                    , plutus-ledger-api
   --                , plutus-metatheory
-----                , plutus-pab
-----                , plutus-playground-server
+                    , plutus-pab
+                    , plutus-playground-server
 --                  , plutus-playground-usecases
                     , plutus-tx
                     , plutus-tx-plugin
-----                , plutus-use-cases
+                    , plutus-use-cases
 --                  , postgresql-simple
---                  , pretty
---                  , pretty-show
---                  , pretty-simple
---                  , prettyprinter
+                    , pretty
+                    , pretty-show
+                    , pretty-simple
+                    , prettyprinter
                     , prettyprinter-configurable
 --                  , primitive
                     , process
---                  , process-extras
---                  , profunctors
+                    , process-extras
+                    , profunctors
 --                  , prometheus
 --                  , protolude
---                  , psqueues
+                    , psqueues
                     , purescript-bridge
                     , QuickCheck
---                  , quickcheck-classes
+                    , quickcheck-arbitrary-adt
+                    , quickcheck-classes
+                    , quickcheck-classes-base
                     , quickcheck-dynamic
---                  , quickcheck-instances
---                  , quickcheck-state-machine
---                  , quickcheck-text
---                  , quiet
---                  , random
---                  , random-shuffle
---                  , Rasterific
---                  , rate-limit
---                  , recursion-schemes
---                  , regex-compat
---                  , regex-pcre-builtin
---                  , req
---                  , resource-pool
---                  , resourcet
---                  , retry
---                  , row-types
+                    , quickcheck-instances
+                    , random
+                    , random-shuffle
+                    , regex-base
+                    , regex-compat
+                    , regex-pcre-builtin
+                    , regex-posix
+                    , resource-pool
+                    , resourcet
+                    , retry
+                    , row-types
 --                  , safe
 --                  , safe-exceptions
 --                  , say
---                  , sbv
+                    , sbv
                     , scientific
---                  , scrypt
---                  , semialign
---                  , semigroupoids
---                  , semigroups
+                    , scrypt
                     , serialise
                     , servant
---                  , servant-client
---                  , servant-client-core
---                  , servant-foreign
---                  , servant-openapi3
---                  , servant-options
+                    , servant
+                    , servant-blaze
+                    , servant-client
+                    , servant-client-core
+                    , servant-foreign
+                    , servant-openapi3
+                    , servant-options
                     , servant-purescript
---                  , servant-server
---                  , servant-swagger
---                  , servant-swagger-ui
---                  , servant-websockets
+                    , servant-server
+                    , servant-swagger-ui
+                    , servant-swagger-ui-core
+                    , servant-websockets
                     , shake
                     , shelley-spec-ledger
                     , shelley-spec-non-integral
---                  , should-not-typecheck
---                  , signal
---                  , silently
---                  , size-based
-                    , small-steps
+--                  , small-steps
                     , smallcheck
 --                  , snap-core
 --                  , snap-server
---                  , some
---                  , sop-core
 --                  , sort
                     , split
---                  , splitmix
---                  , sqlite-simple
+                    , sqlite-simple
                     , statistics
                     , stm
---                  , Stream
 --                  , streaming
 --                  , streaming-binary
 --                  , streaming-bytestring
@@ -403,75 +298,57 @@ library
 --                  , string-qq
 --                  , swagger2
 --                  , systemd
---                  , tagged
---                  , tasty
---                  , tasty-bench
---                  , tasty-expected-failure
---                  , tasty-golden
---                  , tasty-hedgehog
---                  , tasty-hunit
---                  , tasty-quickcheck
---                  , tasty-smallcheck
---                  , tdigest
---                  , template-haskell
---                  , temporary
---                  , test
---                  , test-framework
---                  , test-framework-hunit
---                  , test-framework-quickcheck2
---                  , text
---                  , text-ansi
-                    , text-class
+                    , tasty
+                    , tasty-bench
+                    , tasty-expected-failure
+                    , tasty-golden
+                    , tasty-hedgehog
+                    , tasty-hunit
+                    , tasty-quickcheck
+                    , tasty-smallcheck
+                    , template-haskell
+                    , text
 --                  , text-short
---                  , th-abstraction
---                  , th-lift
---                  , th-lift-instances
---                  , th-utilities
---                  , these
---                  , threepenny-gui
                     , time
---                  , time-out
---                  , time-units
+                    , time-out
+                    , time-units
                     , tls
-                    , trace-dispatcher
-                    , trace-forward
-                    , trace-resources
+--                  , trace-dispatcher
+--                  , trace-forward
+--                  , trace-resources
 --                  , tracer-transformers
                     , transformers
                     , transformers-compat
                     , transformers-except
---                  , tree-diff
---                  , tx-generator
 --                  , typed-process
                     , typed-protocols
                     , typed-protocols-cborg
                     , typed-protocols-examples
 --                  , typerep-map
---                  , unagi-chan
---                  , Unique
 --                  , unix
 --                  , unix-bytestring
 --                  , unix-compat
 --                  , unliftio
 --                  , unliftio-core
---                  , unordered-containers
+                    , unordered-containers
 --                  , utf8-string
---                  , uuid
+                    , uuid
 --                  , validation
                     , vector
                     , vector-algorithms
                     , void
---                  , wai
---                  , wai-app-static
---                  , wai-cors
---                  , wai-extra
---                  , warp
---                  , warp-tls
-----                , web-ghc
---                  , websockets
---                  , wide-word
+                    , wai
+                    , wai-app-static
+                    , wai-cors
+                    , wai-extra
+                    , wai-logger
+                    , wai-websockets
+                    , warp
+                    , warp-tls
+                    , web-ghc
+                    , websockets
 --                  , Win32
-                    , Win32-network
+--                  , Win32-network
 --                  , witherable
 --                  , wl-pprint
 --                  , wl-pprint-text
@@ -479,6 +356,7 @@ library
 --                  , x509
 --                  , x509-store
 --                  , x509-validation
+--                  , xhtml
                     , yaml
     default-language: Haskell2010
-    ghc-options     : -fplugin-opt PlutusTx.Plugin:defer-errors -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -fno-spec-constr -fno-specialise -Wall
+    ghc-options     : -fdefer-type-errors -fplugin-opt=PlutusTx.Plugin:defer-errors -Wall

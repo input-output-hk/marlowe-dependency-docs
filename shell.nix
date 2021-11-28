@@ -11,13 +11,15 @@ in
 
     tools = {
       cabal                   = "latest";
+      ghcid                   = "latest";
       ghcide                  = "latest";
       haskell-language-server = "latest";
     # hdevtools               = "latest";
-    # hindent                 = "latest";
+      hindent                 = "latest";
       hlint                   = "latest";
       pointfree               = "latest";
     # pointfull               = "latest";
+      stylish-haskell         = "latest";
     };
 
     buildInputs = [ (import <nixpkgs> {}).git ];
