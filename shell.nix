@@ -4,7 +4,7 @@ in
   project.shellFor {
 
     packages = ps: with ps; [
-      compendium
+      marlowe-dependency-docs
     ];
 
     withHoogle = true;

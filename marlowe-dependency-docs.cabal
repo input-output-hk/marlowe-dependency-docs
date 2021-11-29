@@ -1,7 +1,7 @@
 cabal-version:      3.0
-name:               compendium
+name:               marlowe-dependency-docs
 version:            0.1.0.0
-synopsis:           Compendium of compatible packages.
+synopsis:           Collection of Haskell package versions upon which the main branch of marlowe-cardano depends.
 license:            Apache-2.0
 license-file:       LICENSE
 author:             Brian W Bush <brian.bush@iohk.io>
@@ -359,4 +359,4 @@ library
 --                  , xhtml
                     , yaml
     default-language: Haskell2010
-    ghc-options     : -fdefer-type-errors -fplugin-opt=PlutusTx.Plugin:defer-errors -Wall
+    ghc-options     : -fplugin-opt=PlutusTx.Plugin:defer-errors -Wall
