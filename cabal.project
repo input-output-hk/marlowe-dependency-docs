@@ -1,4 +1,4 @@
-index-state: 2021-11-27T23:43:01Z
+index-state: 2021-10-20T00:00:00Z
 
 packages: .
 
@@ -63,8 +63,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/marlowe-cardano.git
-  tag: 5c3ff5aeaa5c67c2f109cf84970f1f03fc927d43
-  --sha256: 1fdp8x604gqp0239zdm2xsg47zbgqacgnipz7xl1wm1glknyc00s
+  tag: a848ec13b51287d260215df73cb91ccb557ecfda
+  --sha256: 18wkcx5gwaz24xk9dr3lhbzh0zvnyh8p51dvzzwg7v92rfwia221
   subdir:
     marlowe
     marlowe-symbolic
@@ -93,14 +93,14 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-crypto.git
-  tag: 07397f0e50da97eaa0575d93bee7ac4b2b2576ec
-  --sha256: 06sdx5ndn2g722jhpicmg96vsrys89fl81k8290b3lr6b1b0w4m3
+  tag: f73079303f663e028288f9f4a9e08bcca39a923e
+  --sha256: 1n87i15x54s0cjkh3nsxs4r1x016cdw1fypwmr68936n3xxsjn6q
 
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-base
-  tag: 4ea7e2d927c9a7f78ddc69738409a5827ab66b98
-  --sha256: 0n0hxbr0l95cdc25jmmgs7apmmw17i91chhj5rzzv1k7f3iymf6d
+  tag: 654f5b7c76f7cc57900b4ddc664a82fc3b925fb0
+  --sha256: 0j4x9zbx5dkww82sqi086h39p456iq5xr476ylmrnpwcpfb4xai4
   subdir:
     base-deriving-via
     binary
@@ -116,8 +116,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-prelude
-  tag: fd773f7a58412131512b9f694ab95653ac430852
-  --sha256: 02jddik1yw0222wd6q0vv10f7y8rdgrlqaiy83ph002f9kjx7mh6
+  tag: bb4ed71ba8e587f672d06edf9d2e376f4b055555
+  --sha256: 00h10l5mmiza9819p9v5q5749nb9pzgi20vpzpy1d34zmh6gf1cj
   subdir:
     cardano-prelude
     cardano-prelude-test
@@ -133,10 +133,11 @@ source-repository-package
 
 source-repository-package
   type: git
-  location: https://github.com/j-mueller/cardano-wallet
-  tag: 6be73ab852c0592713dfe78218856d4a8a0ee69e
-  --sha256: 0rx5hvmbdv5dwb4qq39vyhisj0v75j21jbiivn3s3q9za6m6x1p4
+  location: https://github.com/input-output-hk/cardano-wallet
+  tag: 760140e238a5fbca61d1b286d7a80ece058dc729
+  --sha256: 014njpddrlqm9bbab636h2gf58zkm0bx04i1jsn07vh5j3k0gri6
   subdir:
+    lib/dbvar
     lib/text-class
     lib/strict-non-empty-containers
     lib/core
@@ -150,8 +151,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/ouroboros-network
-  tag: 1f4973f36f689d6da75b5d351fb124d66ef1057d
-  --sha256: 186056rvzdzy4jhvamjjbcmjyr94hs5hcyr8x6a0ch21hv5f014p
+  tag: d613de3d872ec8b4a5da0c98afb443f322dc4dab
+  --sha256: 0lfbipfdrzay8v1pcazx0qgkda3d1j0505yig9jrml9j7991rmhl
   subdir:
     monoidal-synchronisation
     typed-protocols
@@ -194,7 +195,7 @@ source-repository-package
 
 source-repository-package
   type: git
-  location: https://github.com/input-output-hk/cardano-ledger-specs
+  location: https://github.com/input-output-hk/cardano-ledger
   tag: bf008ce028751cae9fb0b53c3bef20f07c06e333
   --sha256: 0my3801w1vinc0kf5yh9lxl6saqxgwm6ccg0vvzi104pafcwwcqx
   subdir:
@@ -222,18 +223,22 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-node.git
-  tag: b6ca519f97a0e795611a63174687e6bb70c9f752
-  --sha256: 0z5lpmqc98fwg3xzpzxkfslbxdjwfyyw8bn8yq0574sf4942vqdn
+  tag: 4f65fb9a27aa7e3a1873ab4211e412af780a3648
+  --sha256: 00k9fqrm0gphjji23x0nc9z6bqh8bqrncgivn3mi3csacjzicrrx
   subdir:
     cardano-api
     cardano-node
     cardano-cli
-    cardano-config
     cardano-submit-api
     trace-dispatcher
     trace-forward
     trace-resources
 
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/cardano-config
+  tag: e9de7a2cf70796f6ff26eac9f9540184ded0e4e6
+  --sha256: 1wm1c99r5zvz22pdl8nhkp13falvqmj8dgkm8fxskwa9ydqz01ld
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/optparse-applicative
@@ -261,26 +266,25 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus
-  tag: 3f089ccf0ca746b399c99afe51e063b0640af547
-  --sha256: 1nx8xmdgwmnsla4qg4k67f5md8vm3p1p9i25ndalrqdg40z90486
+  tag: 2721c59fd2302b75c4138456c29fd5b509e8340a
+  --sha256: 02g8pzldyfl4pm8sy22yd3l2fr3zpyhwkvv9x3h9lsf6lfx5wi7k
   subdir:
-    plutus-core
     plutus-ledger-api
-    plutus-tx
-    plutus-tx-plugin
     word-array
     prettyprinter-configurable
     stubs/plutus-ghc-stub
+    plutus-core
+    plutus-tx
+    plutus-tx-plugin
     plutus-benchmark
     plutus-errors
     plutus-metatheory
-    plutus-ledger-api
 
 source-repository-package
   type: git
-  location: https://github.com/input-output-hk/plutus-apps
-  tag: a6868cde87600051a4cc808777d665d0b859853c
-  --sha256: 10m0gmnakjnpnzyvjs3ksfpxgjcq3pdphr4gf8v7fjhr9fjbc45n
+  location: https://github.com/bwbush/plutus-apps
+  tag: 1a526e91ccf8ff664d1620634777e011b15ff7da
+  --sha256: 1ab30gwazqp1qg8jsqz5pdlhzmgj0zjpj13mhm3x9gflwip50vak
   subdir:
     freer-extras
     playground-common
@@ -288,9 +292,10 @@ source-repository-package
     plutus-chain-index-core
     plutus-contract
     plutus-ledger
+    plutus-ledger-constraints
     plutus-pab
+    plutus-pab-executables
+    plutus-playground-server
     plutus-use-cases
     quickcheck-dynamic
     web-ghc
-    plutus-playground-server
-    quickcheck-dynamic
