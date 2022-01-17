@@ -37,18 +37,6 @@ constraints:
 
 source-repository-package
   type: git
-  location: https://bitbucket.org/functionally/mantra.git
-  tag: 1cd121202452dcc1bce56ed4b4f41f0e880c9d04
-  --sha256: 0zs071ppzgmk9kzmklfc5r77k6nxnmgvgjf0cjzzz1b97fpsaqvg
-
-source-repository-package
-  type: git
-  location: https://bitbucket.org/functionally/mantra-oracle.git
-  tag: 12827148ee3b74e1911bf602f437f408b8b56998
-  --sha256: 1mkg845zgvksrcmlyd0cki398yi8k9ajynmva2vfk1nrgaks61hr
-
-source-repository-package
-  type: git
   location: https://github.com/input-output-hk/cardano-db-sync.git
   tag: 9d0180571482ee4c6acb6fbc6bf55b5a4e2ee833
   --sha256: 1dxass5r2dyga2rhnzpd6yw4mawnwq74815paqgwdip850bjdfz2
@@ -283,8 +271,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/bwbush/plutus-apps
-  tag: 1a526e91ccf8ff664d1620634777e011b15ff7da
-  --sha256: 1ab30gwazqp1qg8jsqz5pdlhzmgj0zjpj13mhm3x9gflwip50vak
+  tag: 65463b72ffc110bd0762403339c4c72543a99b16
+  --sha256: 1l5pflzk5y91hzrgdm4mcg3dycgck36pbps6fcr8ahnj8855ghn7
   subdir:
     freer-extras
     playground-common
