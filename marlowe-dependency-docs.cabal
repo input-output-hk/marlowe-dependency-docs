@@ -1,6 +1,6 @@
 cabal-version:      3.0
 name:               marlowe-dependency-docs
-version:            0.1.0.0
+version:            0.2.0.0
 synopsis:           Collection of Haskell package versions upon which the main branch of marlowe-cardano depends.
 license:            Apache-2.0
 license-file:       LICENSE
@@ -17,24 +17,19 @@ library
                     , cardano-addresses-cli
                     , cardano-api
                     , cardano-binary
-                    , cardano-binary-test
                     , cardano-crypto
                     , cardano-crypto-class
                     , cardano-crypto-praos
-                    , cardano-crypto-test
                     , cardano-crypto-wrapper
                     , cardano-data
                     , cardano-ledger-alonzo
                     , cardano-ledger-byron
-                    , cardano-ledger-byron-test
                     , cardano-ledger-core
                     , cardano-ledger-pretty
                     , cardano-ledger-shelley
                     , cardano-ledger-shelley-ma
-                    , cardano-ledger-shelley-test
                     , cardano-numeric
                     , cardano-prelude
-                    , cardano-prelude-test
                     , cardano-protocol-tpraos
                     , cardano-slotting
                     , cardano-wallet
@@ -42,7 +37,6 @@ library
                     , cardano-wallet-core
                     , cardano-wallet-core-integration
                     , cardano-wallet-launcher
-                    , cardano-wallet-test-utils
                     , mainland-pretty
                     , marlowe
                     , marlowe-actus
@@ -57,7 +51,6 @@ library
                     , ouroboros-consensus-shelley
                     , ouroboros-network
                     , ouroboros-network-framework
-                    , ouroboros-network-testing
                     , playground-common
                     , plutus-chain-index
                     , plutus-chain-index-core

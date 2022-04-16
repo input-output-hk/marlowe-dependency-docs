@@ -21,7 +21,7 @@ in
       pointfree               = "latest";
     # pointful                = "latest";
     # SourceGraph             = "latest";
-      stylish-haskell         = "latest";
+    # stylish-haskell         = "latest";
     # threadscope             = "latest";
     };
 
