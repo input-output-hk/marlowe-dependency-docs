@@ -28,6 +28,7 @@ library
                     , cardano-ledger-pretty
                     , cardano-ledger-shelley
                     , cardano-ledger-shelley-ma
+                    , cardano-node
                     , cardano-numeric
                     , cardano-prelude
                     , cardano-protocol-tpraos

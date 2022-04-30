@@ -28,8 +28,8 @@ allow-newer:
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/marlowe-cardano.git
-  tag: f24942c8ea6cedf82b3866fb80ddc2cb49ac4efa
-  --sha256: 0ahq99zv0n2lvpi5arybsws705yibszr72fw7j1cbi61kppmjqll
+  tag: ff4fd307c3ea4a57ea4db5fe38ba8540c6daee95
+  --sha256: 0pp7y91f80y8npkpydqazqacim1nhq65zh9wkjc8id1qg24ymcm3
   subdir:
     marlowe
     marlowe-cli
@@ -42,8 +42,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus-apps
-  tag: e1ae7f6100f8bf37fdb8d856b7ac086d8e275cfb
-  --sha256: 138fjr9906d8glim4dd8hlwgf88n4fy6w2h0dclz3gxl04j7gpqr
+  tag: 682977c8c9fe181a0dc066ac2b40a4b1c1b5072c
+  --sha256: 00b4z37kbgf9n4s3cjj461izph181kgh7gcr4jkvarsf76q2wjh6
   subdir:
     freer-extras
     playground-common
@@ -78,6 +78,13 @@ source-repository-package
     plugins/scribe-systemd
     plugins/backend-trace-acceptor
 
+-- | Copied from follow plutus-apps
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/ekg-forward
+  tag: 297cd9db5074339a2fb2e5ae7d0780debb670c63
+  --sha256: sha256-jwj/gh/A/PXhO6yVESV27k4yx9I8Id8fTa3m4ofPnP0=
+
 -- A lot of marlowe dependencies have to be syncronized with the dependencies of
 -- plutus. If you update plutus, please make sure that all dependencies of plutus
 -- are also updated.
@@ -94,13 +101,6 @@ source-repository-package
     prettyprinter-configurable
     stubs/plutus-ghc-stub
     word-array
-
--- | Copied from follow plutus-apps
-source-repository-package
-  type: git
-  location: https://github.com/input-output-hk/ekg-forward
-  tag: 297cd9db5074339a2fb2e5ae7d0780debb670c63
-  --sha256: sha256-jwj/gh/A/PXhO6yVESV27k4yx9I8Id8fTa3m4ofPnP0=
 
 -- Copied from plutus-apps.
 source-repository-package
