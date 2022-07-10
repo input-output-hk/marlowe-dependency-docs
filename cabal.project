@@ -28,8 +28,8 @@ allow-newer:
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/marlowe-cardano.git
-  tag: ff4fd307c3ea4a57ea4db5fe38ba8540c6daee95
-  --sha256: 0pp7y91f80y8npkpydqazqacim1nhq65zh9wkjc8id1qg24ymcm3
+  tag: 00c54fcf65ce18f82c580224f82f56b38e84bb68
+  --sha256: 08qrkjav1if03sxays81z3d5f1f5ykfrkhvphdyvld1qm526lcq0
   subdir:
     marlowe
     marlowe-cli
@@ -42,8 +42,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus-apps
-  tag: 682977c8c9fe181a0dc066ac2b40a4b1c1b5072c
-  --sha256: 00b4z37kbgf9n4s3cjj461izph181kgh7gcr4jkvarsf76q2wjh6
+  tag: 5bcc67b3b2eb219a54b90c24920a72c9266190a2
+  --sha256: 1yc8zwviqlvvizgi4ckpy5jdk2w21qjyijhgpfzrizz84ci2igzd
   subdir:
     freer-extras
     playground-common
